@@ -1,4 +1,5 @@
 转换img
+
 qm importdisk 100 /var/lib/vz/template/iso/openwrt.img local-lvm
 
 硬盘直通
