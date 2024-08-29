@@ -1,3 +1,17 @@
+qm importdisk 100 /var/lib/vz/template/iso/openwrt.img local-lvm
+ls /dev/disk/by-id
+qm set 101 -sata2 /dev/disk/by-id/disk id
+qm importdisk 101 /var/lib/vz/template/iso/rr.img local-lvm
+
+一键优化脚本
+wget -q -O /root/pve_source.tar.gz 'https://bbs.x86pi.cn/file/topic/2024-01-06/file/24f723efc6ab4913b1f99c97a1d1a472b2.gz' && tar zxvf /root/pve_source.tar.gz && /root/./pve_source
+
+
+
+
+
+
+
 天钡wtr n100 nas pve8核显直通win10只需要以下几个步骤，比较简单！
 
 pve8系统安装我这里直接忽略，直接进入主题。
