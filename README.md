@@ -1,6 +1,9 @@
 qm importdisk 100 /var/lib/vz/template/iso/openwrt.img local-lvm
+
 ls /dev/disk/by-id
+
 qm set 101 -sata2 /dev/disk/by-id/disk id
+
 qm importdisk 101 /var/lib/vz/template/iso/rr.img local-lvm
 
 一键优化脚本
