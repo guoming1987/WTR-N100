@@ -94,7 +94,7 @@ The x-igd-gms property sets a value multiplied by 32 as the amount of pre-allo
 
 ④legacy-igd=1 使用传统igd直通模式
 
-
+下载这个压缩包后，解压，把里面的n100.rom用winscp传到pve的/usr/share/kvm/ 目录下
 
 常见问题：解决11-14代pve核显直通win10 win11闪屏黑屏问题
 1.设置物理机bios核显为64m
