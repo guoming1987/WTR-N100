@@ -1,10 +1,11 @@
+转换img
 qm importdisk 100 /var/lib/vz/template/iso/openwrt.img local-lvm
 
+硬盘直通
 ls /dev/disk/by-id
 
 qm set 101 -sata2 /dev/disk/by-id/disk id
 
-qm importdisk 101 /var/lib/vz/template/iso/rr.img local-lvm
 
 一键优化脚本
 wget -q -O /root/pve_source.tar.gz 'https://bbs.x86pi.cn/file/topic/2024-01-06/file/24f723efc6ab4913b1f99c97a1d1a472b2.gz' && tar zxvf /root/pve_source.tar.gz && /root/./pve_source
