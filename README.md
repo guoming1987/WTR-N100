@@ -106,3 +106,6 @@ AME
 在命令窗口输入：cd /volume1/docker/ame_crack/（路径填写你自己的py文件所在文件夹）
 
 回车后再输入：python ame72-3005.py（文件名根据你下载的补丁文件名而定）
+
+
+bash <(curl -L https://raw.githubusercontent.com/dieptang/SurveillanceStation/main/lib/SurveillanceStation-x86_64/install_license)
