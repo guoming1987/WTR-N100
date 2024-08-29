@@ -1,0 +1,28 @@
+下面操作都是先停用photos套件，执行完命令后再启用
+群晖开启 ssh
+获取root 权限 sudo -i 
+
+
+恢复原系统命令
+
+rm -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+rm -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
+mv -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so-bak /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+mv -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0-bak /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
+chmod +x /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+chmod +x /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
+chown SynologyPhotos:SynologyPhotos /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+chown SynologyPhotos:SynologyPhotos /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
+
+
+开启人脸识别
+cp -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so-bak
+cp -f /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0 /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0-bak
+wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/download/1.4.0-0458/libsynophoto-plugin-model.so
+wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/download/1.4.0-0458/libsynophoto-plugin-model.so.1.0
+cp -f libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/
+cp -f libsynophoto-plugin-model.so.1.0 /var/packages/SynologyPhotos/target/usr/lib/
+chmod +x /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+chmod +x /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
+chown SynologyPhotos:SynologyPhotos /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+chown SynologyPhotos:SynologyPhotos /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
