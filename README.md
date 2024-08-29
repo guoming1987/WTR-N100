@@ -100,3 +100,9 @@ The x-igd-gms property sets a value multiplied by 32 as the amount of pre-allo
 1.设置物理机bios核显为64m
 2.设置虚拟机类型为linux
 3.参数x-igd-gms=0x2 改为0x8，最大可改为0x10，32M为基数0x2=64M 0x8=256M 0x10=512M
+
+AME
+
+在命令窗口输入：cd /volume1/docker/ame_crack/（路径填写你自己的py文件所在文件夹）
+
+回车后再输入：python ame72-3005.py（文件名根据你下载的补丁文件名而定）
